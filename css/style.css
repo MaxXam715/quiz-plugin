@@ -241,8 +241,55 @@ a {
   grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
 }
 
+.am-modal-quiz .am-modal-body .am-dialog-question .am-list-question .am-question-slide .am-answer-list.am-card-grid .am-answer-item {
+  display: grid;
+}
+
+.am-modal-quiz .am-modal-body .am-dialog-question .am-list-question .am-question-slide .am-answer-list.am-card-grid .am-answer-item .am-photo-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.am-modal-quiz .am-modal-body .am-dialog-question .am-list-question .am-question-slide .am-answer-list.am-card-grid .am-answer-item .am-checkbox {
+  position: absolute;
+  top: calc(100% - 17px);
+  left: calc(50% - 17px);
+}
+
+.am-modal-quiz .am-modal-body .am-dialog-question .am-list-question .am-question-slide .am-answer-list.am-card-grid .am-answer-item .am-checkbox i {
+  background-color: #fff;
+}
+
+.am-modal-quiz .am-modal-body .am-dialog-question .am-list-question .am-question-slide .am-answer-list.am-card-grid .am-answer-item .am-title-answer {
+  text-align: center;
+  padding: 10px;
+  padding-top: 28px;
+}
+
 .am-modal-quiz .am-modal-body .am-dialog-question .am-list-question .am-question-slide .am-answer-list.am-list-grid {
   grid-template-columns: repeat(2, 1fr);
+}
+
+.am-modal-quiz .am-modal-body .am-dialog-question .am-list-question .am-question-slide .am-answer-list.am-list-grid .am-answer-item {
+  display: flex;
+  align-items: flex-start;
+  padding: 20px 30px;
+}
+
+.am-modal-quiz .am-modal-body .am-dialog-question .am-list-question .am-question-slide .am-answer-list.am-list-grid .am-answer-item .am-title-answer {
+  margin: auto 0;
+  margin-left: 30px;
+}
+
+.am-modal-quiz .am-modal-body .am-dialog-question .am-list-question .am-question-slide .am-answer-list.am-your-answer .am-answer-item textarea {
+  width: 100%;
+  height: 200px;
+  padding: 15px;
+  border: none;
+  resize: none;
+  font-size: 19px;
+  font-weight: 500;
 }
 
 .am-modal-quiz .am-modal-body .am-dialog-question .am-list-question .am-question-slide .am-answer-list .am-answer-item {
@@ -256,53 +303,6 @@ a {
 
 .am-modal-quiz .am-modal-body .am-dialog-question .am-list-question .am-question-slide .am-answer-list .am-answer-item:hover {
   border-color: var(--red);
-}
-
-.am-modal-quiz .am-modal-body .am-dialog-question .am-list-question .am-question-slide .am-answer-list .am-answer-item.am-card {
-  display: grid;
-}
-
-.am-modal-quiz .am-modal-body .am-dialog-question .am-list-question .am-question-slide .am-answer-list .am-answer-item.am-card .am-photo-card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.am-modal-quiz .am-modal-body .am-dialog-question .am-list-question .am-question-slide .am-answer-list .am-answer-item.am-card .am-checkbox {
-  position: absolute;
-  top: calc(100% - 17px);
-  left: calc(50% - 17px);
-}
-
-.am-modal-quiz .am-modal-body .am-dialog-question .am-list-question .am-question-slide .am-answer-list .am-answer-item.am-card .am-checkbox i {
-  background-color: #fff;
-}
-
-.am-modal-quiz .am-modal-body .am-dialog-question .am-list-question .am-question-slide .am-answer-list .am-answer-item.am-card .am-title-answer {
-  text-align: center;
-  padding: 10px;
-  padding-top: 28px;
-}
-
-.am-modal-quiz .am-modal-body .am-dialog-question .am-list-question .am-question-slide .am-answer-list .am-answer-item.am-list {
-  display: flex;
-  align-items: flex-start;
-  padding: 20px 30px;
-}
-
-.am-modal-quiz .am-modal-body .am-dialog-question .am-list-question .am-question-slide .am-answer-list .am-answer-item.am-list .am-title-answer {
-  margin: auto 0;
-  margin-left: 30px;
-}
-
-.am-modal-quiz .am-modal-body .am-dialog-question .am-list-question .am-question-slide .am-answer-list .am-answer-item.am-textarea textarea {
-  width: 100%;
-  height: 200px;
-  padding: 15px;
-  border: none;
-  resize: none;
-  font-size: 19px;
-  font-weight: 500;
 }
 
 .am-modal-quiz .am-modal-body .am-dialog-question .am-list-question .am-question-slide .am-answer-list .am-answer-item.am-select {
