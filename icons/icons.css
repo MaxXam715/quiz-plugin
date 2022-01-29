@@ -18,7 +18,12 @@
     background-color: #000;
 }
 
-.icon.logo {
-    mask-image: url(/images/logo.svg);
-    -webkit-mask-image: url(/images/logo.svg);
+.icon.arrow-right {
+    mask-image: url(/icons/arrow-right.svg);
+    -webkit-mask-image: url(/icons/arrow-right.svg);
+}
+
+.icon.checkbox {
+    mask-image: url(/icons/checkbox.svg);
+    -webkit-mask-image: url(/icons/checkbox.svg);
 }

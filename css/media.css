@@ -1,0 +1,96 @@
+@media (max-width: 1000px) {
+  .am-modal-quiz .am-modal-body .am-step-start {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto;
+  }
+  .am-modal-quiz .am-modal-body .am-step-start .am-left-col {
+    padding: 30px;
+    border-radius: 10px 10px 0 0;
+  }
+  .am-modal-quiz .am-modal-body .am-step-start .am-right-col {
+    border-radius: 0 0 10px 10px;
+  }
+  .am-modal-quiz .am-modal-body .am-dialog-question .am-list-question .am-question-slide .am-answer-list .am-answer-item.am-list {
+    padding: 10px;
+  }
+  .am-modal-quiz .am-modal-body .am-dialog-question .am-list-question .am-question-slide .am-answer-list .am-answer-item.am-list .am-title-answer {
+    margin-left: 10px;
+  }
+  .am-modal-quiz .am-modal-body .am-dialog-question .am-list-question .am-question-slide .am-answer-list .am-checkbox {
+    transform: scale(0.8);
+  }
+}
+
+@media (max-width: 900px) {
+  .am-modal-quiz .am-modal-body .am-dialog-question {
+    grid-template-columns: 1fr;
+    grid-gap: 0;
+  }
+  .am-modal-quiz .am-modal-body .am-dialog-question .am-right-col-sidebar {
+    display: none !important;
+  }
+}
+
+@media (max-width: 800px) {
+  .am-modal-quiz {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 700px) {
+  body {
+    background-image: url(/img/back-mob.png);
+  }
+  .am-modal-quiz {
+    padding: 0;
+  }
+  .am-modal-quiz .am-modal-body {
+    max-height: none;
+  }
+  .am-modal-quiz .am-modal-body .am-step-start .am-left-col {
+    padding: 0;
+    border-radius: 0;
+  }
+  .am-modal-quiz .am-modal-body .am-step-start .am-left-col .am-index-photo {
+    border-radius: 0;
+  }
+  .am-modal-quiz .am-modal-body .am-step-start .am-right-col {
+    border-radius: 0;
+  }
+  .am-modal-quiz .am-modal-body .am-dialog-question .am-list-question {
+    border-radius: 0;
+  }
+  .am-modal-quiz .am-modal-body .am-dialog-question .am-list-question .am-question-slide .am-question-title {
+    padding: 15px 20px;
+  }
+  .am-modal-quiz .am-modal-body .am-dialog-question .am-list-question .am-question-slide .am-question-title .am-title-question {
+    font-size: 18px;
+  }
+  .am-modal-quiz .am-modal-body .am-dialog-question .am-list-question .am-question-slide .am-answer-list {
+    grid-gap: 10px;
+  }
+  .am-modal-quiz .am-modal-body .am-dialog-question .am-list-question .am-question-slide .am-answer-list.am-list-grid {
+    grid-template-columns: 1fr;
+  }
+  .am-modal-quiz .am-modal-body .am-dialog-question .am-list-question .am-navbar-bottom {
+    padding: 15px 20px;
+  }
+  .am-modal-quiz .am-modal-body .am-dialog-question .am-list-question .am-navbar-bottom .am-buttons-nav .am-btn.am-btn-primary .am-small-title {
+    display: block;
+  }
+  .am-modal-quiz .am-modal-body .am-dialog-question .am-list-question .am-navbar-bottom .am-buttons-nav .am-btn.am-btn-primary .am-large-title {
+    display: none;
+  }
+  .am-modal-quiz .am-modal-body .am-dialog-question .am-list-question .am-navbar-bottom .am-buttons-nav .am-btn.am-btn-primary i {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .am-modal-quiz .am-modal-body .am-dialog-question .am-list-question .am-question-slide .am-answer-list {
+    padding: 15px;
+  }
+  .am-modal-quiz .am-modal-body .am-dialog-question .am-list-question .am-question-slide .am-answer-list.am-card-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
