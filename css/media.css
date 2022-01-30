@@ -10,6 +10,13 @@
   .am-modal-quiz .am-modal-body .am-step-start .am-right-col {
     border-radius: 0 0 10px 10px;
   }
+  .am-modal-quiz .am-modal-body .am-finish-quiz {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+  }
+  .am-modal-quiz .am-modal-body .am-finish-quiz .am-finish-text {
+    padding: 30px;
+  }
   .am-modal-quiz .am-modal-body .am-dialog-question .am-list-question .am-question-slide .am-answer-list .am-answer-item.am-list {
     padding: 10px;
   }
@@ -56,6 +63,15 @@
   }
   .am-modal-quiz .am-modal-body .am-step-start .am-right-col {
     border-radius: 0;
+  }
+  .am-modal-quiz .am-modal-body .am-finish-quiz .am-finish-text {
+    padding: 30px;
+  }
+  .am-modal-quiz .am-modal-body .am-finish-quiz .am-finish-text .am-heading {
+    font-size: 24px;
+  }
+  .am-modal-quiz .am-modal-body .am-finish-quiz .am-finish-text .am-desc {
+    font-size: 15px;
   }
   .am-modal-quiz .am-modal-body .am-dialog-question .am-list-question {
     border-radius: 0;

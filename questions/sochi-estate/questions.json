@@ -1,0 +1,66 @@
+{
+    "start": [
+        {
+            "slogan": "Подберем новостройку для вас",
+            "title": "Опрос",
+            "desc": "Найдите квартиру мечты за 7 вопросов",
+            "footnote": "Мы вышлем подборку, индивидуально под ваши параметры",
+            "discount": "120 000"
+        }
+    ],
+    "manager": [
+        {
+            "name": "Владимир Краснов",
+            "post": "Ваш личный менеджер",
+            "photo": "/questions/sochi-estate/manager.jpg",
+            "hint": "В отеле “Волна” присутствуют как небольшие номера от 20 м2, так и просторные от 100 м2"
+        }
+    ],
+    "gift": [
+        {
+            "text": "Подборку под квартир под бюджет и цели"
+        },{
+            "text": "Скидку на 120 000 руб. на покупку"
+        }
+    ],
+    "questions": [
+        {
+            "type": "card",
+            "question": "Для каких целей Вы планируете приобретать недвижимость?",
+            "answer": [
+                {
+                    "photo": "http://en.ch11883.tmweb.ru/upload/iblock/2b1/2b1dcb92b974dfa7bf4cd1979296cd57.jpg",
+                    "text": "Для жилья"
+                },{
+                    "photo": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/207308378.jpg?k=4f2d5492c3b80067a0d585c326751913b621721941d7cb1c538f944db355b159&o=&hp=1",
+                    "text": "Для аренды"
+                },{
+                    "photo": "https://na-zapade.ru/wp-content/uploads/2020/07/4243689845.jpg",
+                    "text": "Для бизнеса"
+                },{
+                    "photo": "https://static.tildacdn.com/tild3632-3965-4162-a361-653065633934/13.jpeg",
+                    "text": "Для другое"
+                }
+            ]
+        },{
+            "type": "list",
+            "question": "Вопрос 2",
+            "answer": [
+                {
+                    "text": "ответ 2"
+                },{
+                    "text": "ответ 3"
+                }
+            ]
+        },{
+            "type": "yourText",
+            "question": "Вопрос 33333",
+            "answer": [
+                {
+                    "text": "ответ 4"
+                }
+            ]
+        }
+    ]
+}
+

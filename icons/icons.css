@@ -19,11 +19,16 @@
 }
 
 .icon.arrow-right {
-    mask-image: url(/icons/arrow-right.svg);
-    -webkit-mask-image: url(/icons/arrow-right.svg);
+    mask-image: url(arrow-right.svg);
+    -webkit-mask-image: url(arrow-right.svg);
 }
 
 .icon.checkbox {
-    mask-image: url(/icons/checkbox.svg);
-    -webkit-mask-image: url(/icons/checkbox.svg);
+    mask-image: url(checkbox.svg);
+    -webkit-mask-image: url(checkbox.svg);
+}
+
+.icon.check {
+    mask-image: url(check.svg);
+    -webkit-mask-image: url(check.svg);
 }

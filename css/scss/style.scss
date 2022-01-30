@@ -72,6 +72,14 @@ a {
   padding: 50px 30px;
   overflow-y: auto;
   opacity: 1;
+  transition: all 0.2s;
+
+  &.am-hide {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+  }
 
   .am-modal-body {
     margin: auto;
@@ -85,6 +93,14 @@ a {
       grid-template-columns: 1fr 320px;
       height: 100%;
       width: 100%;
+      transform: translateY(0);
+      transition: all 1s;
+
+      &.am-hide {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(20px);
+      }
 
       .am-left-col,
       .am-right-col {
@@ -170,10 +186,21 @@ a {
 
     // Вопросы
     .am-dialog-question {
-      display: grid;
+      display: none;
       grid-template-columns: 1fr 320px;
       grid-gap: 20px;
       height: 100%;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-20px);
+      transition: all 0.2s;
+
+      &.am-show {
+        display: grid;
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
 
       // Окно с вопросами
       .am-list-question {
@@ -192,7 +219,7 @@ a {
         .slider-inner {
           display: flex;
           position: relative;
-          transition: all 0.3s;
+          transition: all 0.5s;
           left: 0;
           height: 100%;
         }
@@ -245,6 +272,8 @@ a {
 
               .am-answer-item {
                 display: grid;
+                background-color: #fff;
+                transition: all 0.2s;
 
                 .am-photo-card {
                   img {
@@ -268,6 +297,16 @@ a {
                   text-align: center;
                   padding: 10px;
                   padding-top: 28px;
+                }
+
+                &.am-select {
+                  border-color: var(--red);
+                  box-shadow: 0px 13px 25px rgba(0, 0, 0, 0.1);
+                  transition: all 0.2s;
+
+                  .am-checkbox {
+                    background-color: var(--red);
+                  }
                 }
               }
             }
@@ -355,9 +394,11 @@ a {
             font-size: 16px;
             color: var(--gray_2);
 
-            span {
-              color: #000;
-              margin-left: 10px;
+            .am-step-text {
+              span:first-child {
+                color: #000;
+                margin-left: 5px;
+              }
             }
           }
 
@@ -525,6 +566,89 @@ a {
           }
         }
 
+      }
+    }
+
+    .am-finish-quiz {
+      display: grid;
+      grid-template-columns: 1fr 320px;
+      grid-gap: 20px;
+      height: 100%;
+      transition: all 0.2s;
+
+      .am-finish-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 100px;
+
+        .am-heading {
+          font-weight: 600;
+          font-size: 28px;
+          color: #000;
+          margin-bottom: 20px;
+        }
+
+        .am-desc {
+          font-weight: 500;
+          font-size: 16px;
+          color: var(--gray_3);
+          max-width: 600px;
+        }
+      }
+
+      .am-finish-form {
+        display: flex;
+        align-items: center;
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 20px;
+
+        form {
+          width: 100%;
+
+          label {
+            display: flex;
+            flex-direction: column;
+
+            span {
+              font-weight: 500;
+              font-size: 16px;
+              color: var(--gray_3);
+            }
+
+            input {
+              position: relative;
+              height: 54px;
+              border: 1px solid #BCBCBC;
+              border-radius: 5px;
+              margin-top: 10px;
+              margin-bottom: 20px;
+              padding: 0 10px 0 55px;
+
+              &[name=name] {
+                background: url(/icons/user.svg) no-repeat 15px center;
+              }
+              &[name=phone] {
+                background: url(/icons/phone.svg) no-repeat 15px center;
+              }
+            }
+          }
+
+          .am-btn {
+            width: 100%;
+            justify-content: center;
+            padding: 15px;
+
+            i {
+              background-color: #fff;
+              font-size: 16px;
+              margin-left: 10px;
+            }
+          }
+        }
       }
     }
   }

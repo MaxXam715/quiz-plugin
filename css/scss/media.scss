@@ -14,6 +14,15 @@
         }
       }
 
+      .am-finish-quiz {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr;
+
+        .am-finish-text {
+          padding: 30px;
+        }
+      }
+
       .am-dialog-question {
         .am-list-question {
           .am-question-slide {
@@ -83,6 +92,20 @@
         }
         .am-right-col {
           border-radius: 0;
+        }
+      }
+
+      .am-finish-quiz {
+        .am-finish-text {
+          padding: 30px;
+
+          .am-heading {
+            font-size: 24px;
+          }
+
+          .am-desc {
+            font-size: 15px;
+          }
         }
       }
 

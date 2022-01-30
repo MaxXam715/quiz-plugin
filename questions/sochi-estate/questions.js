@@ -1,17 +1,17 @@
-var quiz = [
+var data =
     {
-    title: 'Опрос',
-    desc: 'Найдите квартиру мечты за 7 вопросов',
-    footnote: 'Мы вышлем подборку, индивидуально под ваши параметры',
-    questions: [
-        {
-            type: 'cards',
-            question: 'Вопрос',
-            answer: [
-                'Ответ 1',
-                'Ответ 2',
-                'Ответ 3'
-            ]
-        }
-    ]}
-];
+        "artists" : [
+            {
+                "artistname" : "Leonard Cohen",
+                "born" : "1934"
+            },
+            {
+                "artistname" : "Joe Satriani",
+                "born" : "1956"
+            },
+            {
+                "artistname" : "Snoop Dogg",
+                "born" : "1971"
+            }
+        ]
+    }
