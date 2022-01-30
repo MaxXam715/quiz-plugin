@@ -574,7 +574,15 @@ a {
       grid-template-columns: 1fr 320px;
       grid-gap: 20px;
       height: 100%;
-      transition: all 0.2s;
+      transform: translateY(0);
+      transition: all 1s;
+
+      &.am-hide {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(20px);
+      }
+
 
       .am-finish-text {
         display: flex;
@@ -647,6 +655,12 @@ a {
               font-size: 16px;
               margin-left: 10px;
             }
+          }
+
+          input.error-valid,
+          select.error-valid,
+          textarea.error-valid {
+            border-color: var(--red);
           }
         }
       }

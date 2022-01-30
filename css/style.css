@@ -551,7 +551,14 @@ a {
   grid-template-columns: 1fr 320px;
   grid-gap: 20px;
   height: 100%;
-  transition: all 0.2s;
+  transform: translateY(0);
+  transition: all 1s;
+}
+
+.am-modal-quiz .am-modal-body .am-finish-quiz.am-hide {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
 }
 
 .am-modal-quiz .am-modal-body .am-finish-quiz .am-finish-text {
@@ -628,6 +635,12 @@ a {
   background-color: #fff;
   font-size: 16px;
   margin-left: 10px;
+}
+
+.am-modal-quiz .am-modal-body .am-finish-quiz .am-finish-form form input.error-valid,
+.am-modal-quiz .am-modal-body .am-finish-quiz .am-finish-form form select.error-valid,
+.am-modal-quiz .am-modal-body .am-finish-quiz .am-finish-form form textarea.error-valid {
+  border-color: var(--red);
 }
 
 .am-box-ratio {

@@ -196,28 +196,69 @@ function sidebar(quiz) {
 
 function finishQuiz() {
     var html = `
-    <div class="am-finish-quiz">
+    <div class="am-finish-quiz am-hide">
         <div class="am-finish-text">
             <p class="am-heading">Отлично, остался последний шаг</p>
             <p class="am-desc">Оставьте свои контактные данные, и обработав Ваши ответы - мы сделаем максимально выгодное предложение</p>
         </div>
         <div class="am-finish-form">
-            <form action="">
+            <form>
                 <label>
                     <span>Ваше имя</span>
-                    <input type="text" name="name" placeholder="Имя">
+                    <input type="text" name="name" class="valid-check" placeholder="Имя" data-error="Введите имя">
                 </label>
                 <label>
                     <span>Ваше имя</span>
-                    <input type="text" name="phone" placeholder="Телефон">
+                    <input type="text" name="phone" class="valid-check" placeholder="Телефон" data-error="Введите номер телефона">
                 </label>
-                <button class="am-btn am-btn-primary">Получить подборку <i class="icon check"></i></button>
+                <button class="am-btn am-btn-primary am-send-form" type="button">Получить подборку <i class="icon check"></i></button>
             </form>
         </div>
     </div>`;
 
     $('.am-dialog-question').removeClass('am-show');
     $('.am-modal-quiz .am-modal-body').append(html)
+
+    setTimeout(function(){
+        $('.am-finish-quiz').removeClass('am-hide');
+    }, 0);
+
+    $('.am-send-form').on('click', function () {
+        // валидация формы
+        var countLabel = $(this).parents('form').find('label').length;
+        var pathLabel = $(this).parents('form').find('label');
+        var validation = false;
+        var completion = 0;
+
+        console.log(countLabel)
+
+        $(pathLabel).each(function () {
+            var pathInput = $(this).find('input, textarea, select');
+            var errorText = $(this).find('input, textarea, select').attr('data-error');
+            var pattern = /^([a-z0-9_\.-])+[@][a-z0-9-]+\.([a-z]{2,4}\.)?[a-z]{2,4}$/i;
+
+            // Проверка полей
+            if ( pathInput.hasClass('valid-check') && pathInput.val().length < 1 ) { // проверка на любое слово где > 1 символа
+                $(this).find('input, textarea, select').addClass('error-valid');
+                alert(errorText)
+            } else if ( pathInput.hasClass('phone') && pathInput.val().length < 18 ) { // проверка тел формата +7 (999) 999-99-99
+                $(this).find('input').addClass('error-valid');
+                alert(errorText)
+            } else if ( pathInput.hasClass('email') && !(pattern.test(pathInput.val())) ) { // проверка email типа name@mail.ru
+                $(this).find('input').addClass('error-valid');
+                alert(errorText)
+            } else {
+                validation = true;
+                completion++;
+                $(this).find('input, textarea, select').removeClass('error-valid')
+            }
+        });
+        // Валидация пройдена и готова отправка формы
+        if ( completion === countLabel && validation === true ) {
+            alert('Ваша заявка отправлена!')
+        }
+    })
+
     return html;
 }
 
@@ -273,4 +314,11 @@ function initSlider() {
         var orderSlide = $('.am-question-slide.am-active').attr('am-order');
         $('.am-modal-quiz .am-navbar-bottom .am-order').text(orderSlide)
     })
+}
+
+
+
+
+function validForm() {
+
 }
