@@ -216,12 +216,16 @@ function finishQuiz() {
         </div>
     </div>`;
 
-    $('.am-dialog-question').removeClass('am-show');
+
+    $('.am-dialog-question').fadeOut('slow', function(){
+        $('.am-dialog-question').remove();
+    });
+
     $('.am-modal-quiz .am-modal-body').append(html)
 
     setTimeout(function(){
         $('.am-finish-quiz').removeClass('am-hide');
-    }, 0);
+    }, 500);
 
     $('.am-send-form').on('click', function () {
         // валидация формы
@@ -299,6 +303,7 @@ function initSlider() {
             $('.am-question-slide.am-active').prev('.am-question-slide.am-active').removeClass('am-active');
         } else {
             finishQuiz()
+            sendAnswers()
         }
     });
     prev.on('click',function(){
@@ -319,6 +324,15 @@ function initSlider() {
 
 
 
-function validForm() {
+function sendAnswers() {
+
+    var dataAnswer = [];
+
+    $('.am-slider-quiz .am-question-slide').each(function () {
+        var question = $(this).find('.am-title-question').text();
+        var answer = $(this).find('.am-answer-item.am-select .am-title-answer').text();
+        dataAnswer.push({question: question, answer: answer});
+    });
+    console.log(dataAnswer)
 
 }

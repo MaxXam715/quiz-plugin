@@ -11,10 +11,11 @@
 
 /* Конец - Переменные */
 body {
+  overflow: hidden !important;
   margin: 0;
   font-family: 'Gilroy', sans-serif;
   color: #000000;
-  background-image: url(/img/back-pc.png);
+  background-image: url(/questions/sochi-estate/background.png);
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -68,6 +69,7 @@ a {
   background-color: rgba(0, 0, 0, 0.7);
   padding: 50px 30px;
   overflow-y: auto;
+  overflow-x: hidden;
   opacity: 1;
   transition: all 0.2s;
 }

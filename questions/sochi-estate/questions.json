@@ -53,11 +53,13 @@
                 }
             ]
         },{
-            "type": "yourText",
-            "question": "Вопрос 33333",
+            "type": "list",
+            "question": "Вопрос 3",
             "answer": [
                 {
                     "text": "ответ 4"
+                },{
+                    "text": "ответ 5"
                 }
             ]
         }
