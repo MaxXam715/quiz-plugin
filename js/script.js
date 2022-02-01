@@ -4,6 +4,8 @@ $(document).ready(function () {
     initQuiz();
 })
 
+let quizAnswers = [];
+
 function initQuiz() {
     var html = ``;
     $.getJSON(pathQuiz, function(quiz) {
@@ -259,7 +261,34 @@ function finishQuiz() {
         });
         // Валидация пройдена и готова отправка формы
         if ( completion === countLabel && validation === true ) {
-            alert('Ваша заявка отправлена!')
+
+            let username = $(this).parents('form').find('[name="name"]').val()
+            let phone = $(this).parents('form').find('[name="phone"]').val()
+
+
+            let results = {
+                username,
+                phone,
+                quiz: quizAnswers
+            }
+
+            $.ajax({
+                url: './send.php',
+                method: 'post',
+                dataType: 'json',
+                data: results,
+                success: function(response){
+                    if(response.result === 'success'){
+                        alert('Ваша заявка отправлена!')
+                    } else {
+                        alert('Ваша заявка не отправлена, обратитесь к администратору сайта!')
+                    }
+                }
+            });
+
+
+
+
         }
     })
 
@@ -303,7 +332,7 @@ function initSlider() {
             $('.am-question-slide.am-active').prev('.am-question-slide.am-active').removeClass('am-active');
         } else {
             finishQuiz()
-            sendAnswers()
+            quizAnswers = sendAnswers()
         }
     });
     prev.on('click',function(){
@@ -333,6 +362,6 @@ function sendAnswers() {
         var answer = $(this).find('.am-answer-item.am-select .am-title-answer').text();
         dataAnswer.push({question: question, answer: answer});
     });
-    console.log(dataAnswer)
 
+    return dataAnswer;
 }
